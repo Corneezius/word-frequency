@@ -15,8 +15,9 @@
         $sentence_count_results = new RepeatCounter($_GET['sentence'], $_GET['word']);
         $count = $sentence_count_results->CountRepeats();
         $word = $sentence_count_results->getWord();
+        $sentence = $sentence_count_results->getSentence();
 
-        return $app['twig']->render("count_results.html.twig", array("wordCount" => $count, "wordUsed" => $word));
+        return $app['twig']->render("count_results.html.twig", array("wordCount" => $count, "wordUsed" => $word, "sentenceUsed" => $sentence));
     });
 
     return $app;
