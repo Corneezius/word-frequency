@@ -80,7 +80,21 @@
         {
           //Arrange
           $sentence = "I will have oNe salad and oNe soup";
-          $word = "one";
+          $word = "onE";
+          $expected_outcome = 2;
+          $word_frequency_instance = new WordFreqiency($sentence, $word);
+
+          //ACT
+          $test_result = $word_frequency_instance->checkWords($sentence, $word);
+
+          //ASSERT
+          $this->assertEquals($expected_outcome, $test_result);
+        }
+        function test_NumericAndAlphaNumericMix()
+        {
+          //Arrange
+          $sentence = "Th3r3 is some here and th3r3 are some over there";
+          $word = "th3r3";
           $expected_outcome = 2;
           $word_frequency_instance = new WordFreqiency($sentence, $word);
 

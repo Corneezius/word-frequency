@@ -34,7 +34,7 @@ Given a word, Word Frequency Finder will ask the user for a sentence to input an
 ## Specs
 
 * 1). The program recognizes a single letter word on a single letter sentence
-  + IN: sentence: "an apple is a fruit" word: "a"
+  + IN: sentence: "a" word: "a"
   + OUT: 1
 
 * 2). The program recognizes a single letter word on a sentence one time
