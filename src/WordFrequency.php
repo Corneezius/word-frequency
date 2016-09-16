@@ -43,18 +43,18 @@
             $case_insensitive_sentence = strtolower($sentence_to_check);
             $word_to_check = $this->getWord();
             $case_insensitive_word = strtolower($word_to_check);
-            $count_of_word = 0;
+            $result = 0;
             $words_in_sentence = explode(" ", $case_insensitive_sentence);
 
             foreach($words_in_sentence as $word)
             {
                 if($word === $case_insensitive_word)
                 {
-                    $count_of_word++;
+                    $result++;
                 }
             }
 
-            return $count_of_word;
+            return $result;
         }
     }
 

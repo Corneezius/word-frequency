@@ -8,8 +8,15 @@
     $app->register(new Silex\Provider\TwigServiceProvider(), array("twig.path" => __DIR__."/../views"));
 
     $app->get("/", function() use($app) {
-        return "Hello";
-        //$app["twig"]->render("Word_frequency_form.html.twig");
+        return $app["twig"]->render("Word_frequency_form.html.twig");
+    });
+
+    $app->get("/count_result", function() use($app) {
+        $sentence_count_results = new RepeatCounter($_GET['sentence'], $_GET['word']);
+        $count = $sentence_count_results->CountRepeats();
+        $word = $sentence_count_results->getWord();
+
+        return $app['twig']->render("count_results.html.twig", array("wordCount" => $count, "wordUsed" => $word));
     });
 
     return $app;
