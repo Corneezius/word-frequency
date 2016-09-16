@@ -39,7 +39,20 @@
 
         function checkWords()
         {
-            return 1;
+            $sentence_to_check = $this->getSentence();
+            $word_to_check = $this->getWord();
+            $count_of_word = 0;
+            $words_in_sentence = explode(" ", $sentence_to_check);
+
+            foreach($words_in_sentence as $word)
+            {
+                if($word === $word_to_check)
+                {
+                    $count_of_word++;
+                }
+            }
+
+            return $count_of_word;
         }
     }
 
