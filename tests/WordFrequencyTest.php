@@ -95,6 +95,7 @@
           //Arrange
           $sentence = "Th3r3 is some here and th3r3 are some over there";
           $word = "th3r3";
+          
           $expected_outcome = 2;
           $word_frequency_instance = new WordFreqiency($sentence, $word);
 
