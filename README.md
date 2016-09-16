@@ -33,33 +33,36 @@ Given a word, Word Frequency Finder will ask the user for a sentence to input an
 
 ## Specs
 
-
-* 1). The program recognizes a single letter word on a sentence one time
+* 1). The program recognizes a single letter word on a single letter sentence
   + IN: sentence: "an apple is a fruit" word: "a"
   + OUT: 1
 
-* 2). The program recognizes a single letter word multiple times
+* 2). The program recognizes a single letter word on a sentence one time
+  + IN: sentence: "an apple is a fruit" word: "a"
+  + OUT: 1
+
+* 3). The program recognizes a single letter word multiple times
   + IN: sentence: "a friend of mine just had a birthday" word: "a"
   + OUT: 2
 
-* 3). The program recognizes an alpha word in a sentence
+* 4). The program recognizes an alpha word in a sentence
   + IN: sentence: "a friend of mine just had a birthday" word: "birthday"
   + OUT: 1
 
-* 4). The program recognizes multiple alpha words in a sentence
+* 5). The program recognizes multiple alpha words in a sentence
   + IN:  sentence: "I will have one salad and one soup" word: "one"
   + OUT: 2
 
-* 5). The program will recognize words that are written in different cases;
+* 6). The program will recognize words that are written in different cases;
   + IN: sentence: "I will have One salad and oNe soup" word: "one"
   + OUT: 2
 
-* 6). The program will recognize a string with a mix of numeric and alpha  characters
+* 7). The program will recognize a string with a mix of numeric and alpha  characters
 
   + IN: sentence: "Th3r3 is some here and th3r3 are some over there" word: "th3r3"
   + OUT: 2
 
-* 7). The program will recognize a string with a mix of numeric, alpha and non-alphanumeric characters
+* 8). The program will recognize a string with a mix of numeric, alpha and non-alphanumeric characters
   + IN: sentence: "C@nad@ oh C@nad@" word:"C@nad@"
   + OUT: 2
 
