@@ -2,7 +2,7 @@
 
     require_once(__DIR__."/../src/WordFrequency.php");
 
-    class WordFrequencyTest extends PHPUnit_Framework_TestCase
+    class RepeatCounterTest extends PHPUnit_Framework_TestCase
     {
         function test_1leLetterWord1leLetterSentence()
         {
@@ -10,10 +10,10 @@
             $sentence = "a";
             $word = "a";
             $expected_outcome = 1;
-            $word_frequency_instance = new WordFreqiency($sentence, $word);
+            $word_frequency_instance = new RepeatCounter($sentence, $word);
 
             //ACT
-            $test_result = $word_frequency_instance->checkWords($sentence, $word);
+            $test_result = $word_frequency_instance->CountRepeats($sentence, $word);
 
             //ASSERT
             $this->assertEquals($expected_outcome, $test_result);
@@ -25,10 +25,10 @@
             $sentence = "an apple is a fruit";
             $word = "a";
             $expected_outcome = 1;
-            $word_frequency_instance = new WordFreqiency($sentence, $word);
+            $word_frequency_instance = new RepeatCounter($sentence, $word);
 
             //ACT
-            $test_result = $word_frequency_instance->checkWords($sentence, $word);
+            $test_result = $word_frequency_instance->CountRepeats($sentence, $word);
 
             //ASSERT
             $this->assertEquals($expected_outcome, $test_result);
@@ -40,10 +40,10 @@
             $sentence = "a friend of mine just had a birthday";
             $word = "a";
             $expected_outcome = 2;
-            $word_frequency_instance = new WordFreqiency($sentence, $word);
+            $word_frequency_instance = new RepeatCounter($sentence, $word);
 
             //ACT
-            $test_result = $word_frequency_instance->checkWords($sentence, $word);
+            $test_result = $word_frequency_instance->CountRepeats($sentence, $word);
 
             //ASSERT
             $this->assertEquals($expected_outcome, $test_result);
@@ -54,10 +54,10 @@
             $sentence = "a friend of mine just had a birthday";
             $word = "birthday";
             $expected_outcome = 1;
-            $word_frequency_instance = new WordFreqiency($sentence, $word);
+            $word_frequency_instance = new RepeatCounter($sentence, $word);
 
             //ACT
-            $test_result = $word_frequency_instance->checkWords($sentence, $word);
+            $test_result = $word_frequency_instance->CountRepeats($sentence, $word);
 
             //ASSERT
             $this->assertEquals($expected_outcome, $test_result);
@@ -68,10 +68,10 @@
             $sentence = "I will have one salad and one soup";
             $word = "one";
             $expected_outcome = 2;
-            $word_frequency_instance = new WordFreqiency($sentence, $word);
+            $word_frequency_instance = new RepeatCounter($sentence, $word);
 
             //ACT
-            $test_result = $word_frequency_instance->checkWords($sentence, $word);
+            $test_result = $word_frequency_instance->CountRepeats($sentence, $word);
 
             //ASSERT
             $this->assertEquals($expected_outcome, $test_result);
@@ -82,10 +82,10 @@
             $sentence = "I will have oNe salad and oNe soup";
             $word = "onE";
             $expected_outcome = 2;
-            $word_frequency_instance = new WordFreqiency($sentence, $word);
+            $word_frequency_instance = new RepeatCounter($sentence, $word);
 
             //ACT
-            $test_result = $word_frequency_instance->checkWords($sentence, $word);
+            $test_result = $word_frequency_instance->CountRepeats($sentence, $word);
 
             //ASSERT
             $this->assertEquals($expected_outcome, $test_result);
@@ -96,10 +96,10 @@
             $sentence = "Th3r3 is some here and th3r3 are some over there";
             $word = "th3r3";
             $expected_outcome = 2;
-            $word_frequency_instance = new WordFreqiency($sentence, $word);
+            $word_frequency_instance = new RepeatCounter($sentence, $word);
 
             //ACT
-            $test_result = $word_frequency_instance->checkWords($sentence, $word);
+            $test_result = $word_frequency_instance->CountRepeats($sentence, $word);
 
             //ASSERT
             $this->assertEquals($expected_outcome, $test_result);
@@ -110,10 +110,10 @@
             $sentence = "C@nad@ oh C@nad@";
             $word = "C@nad@";
             $expected_outcome = 2;
-            $word_frequency_instance = new WordFreqiency($sentence, $word);
+            $word_frequency_instance = new RepeatCounter($sentence, $word);
 
             //ACT
-            $test_result = $word_frequency_instance->checkWords($sentence, $word);
+            $test_result = $word_frequency_instance->CountRepeats($sentence, $word);
 
             //ASSERT
             $this->assertEquals($expected_outcome, $test_result);

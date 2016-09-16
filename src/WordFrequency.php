@@ -1,5 +1,5 @@
 <?php
-    class WordFreqiency
+    class RepeatCounter
     {
         private $sentence;
         private $word;
@@ -37,7 +37,7 @@
             $this->result = (int) $sentence_result;
         }
 
-        function checkWords()
+        function CountRepeats()
         {
             $sentence_to_check = $this->getSentence();
             $case_insensitive_sentence = strtolower($sentence_to_check);

@@ -17,7 +17,7 @@ Given a word, Word Frequency Finder will ask the user for a sentence to input an
   +  1). Navigate to the directory in which you want the Word Frequency Funder project to reside.
 
   +  2). Enter the following command into your terminal:
-        git clone https://github.com/KomodoTech/word-frequency.git
+        git clone https://github.com/nickh93/word-frequency.git
 
   +  3). Navigate to the word-frequency directory, and execute the following command in the terminal:
           composer install
