@@ -76,6 +76,20 @@
           //ASSERT
           $this->assertEquals($expected_outcome, $test_result);
         }
+        function test_FullWordMultipleTimesInSentenceMultipleCharacters()
+        {
+          //Arrange
+          $sentence = "I will have oNe salad and oNe soup";
+          $word = "one";
+          $expected_outcome = 2;
+          $word_frequency_instance = new WordFreqiency($sentence, $word);
+
+          //ACT
+          $test_result = $word_frequency_instance->checkWords($sentence, $word);
+
+          //ASSERT
+          $this->assertEquals($expected_outcome, $test_result);
+        }
     }
 
 ?>
