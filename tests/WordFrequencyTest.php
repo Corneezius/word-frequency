@@ -50,60 +50,73 @@
         }
         function test_FullWordOnceInSentence()
         {
-          //Arrange
-          $sentence = "a friend of mine just had a birthday";
-          $word = "birthday";
-          $expected_outcome = 1;
-          $word_frequency_instance = new WordFreqiency($sentence, $word);
+            //Arrange
+            $sentence = "a friend of mine just had a birthday";
+            $word = "birthday";
+            $expected_outcome = 1;
+            $word_frequency_instance = new WordFreqiency($sentence, $word);
 
-          //ACT
-          $test_result = $word_frequency_instance->checkWords($sentence, $word);
+            //ACT
+            $test_result = $word_frequency_instance->checkWords($sentence, $word);
 
-          //ASSERT
-          $this->assertEquals($expected_outcome, $test_result);
+            //ASSERT
+            $this->assertEquals($expected_outcome, $test_result);
         }
         function test_FullWordMultipleTimesInSentence()
         {
-          //Arrange
-          $sentence = "I will have one salad and one soup";
-          $word = "one";
-          $expected_outcome = 2;
-          $word_frequency_instance = new WordFreqiency($sentence, $word);
+            //Arrange
+            $sentence = "I will have one salad and one soup";
+            $word = "one";
+            $expected_outcome = 2;
+            $word_frequency_instance = new WordFreqiency($sentence, $word);
 
-          //ACT
-          $test_result = $word_frequency_instance->checkWords($sentence, $word);
+            //ACT
+            $test_result = $word_frequency_instance->checkWords($sentence, $word);
 
-          //ASSERT
-          $this->assertEquals($expected_outcome, $test_result);
+            //ASSERT
+            $this->assertEquals($expected_outcome, $test_result);
         }
         function test_FullWordMultipleTimesInSentenceMultipleCharacters()
         {
-          //Arrange
-          $sentence = "I will have oNe salad and oNe soup";
-          $word = "onE";
-          $expected_outcome = 2;
-          $word_frequency_instance = new WordFreqiency($sentence, $word);
+            //Arrange
+            $sentence = "I will have oNe salad and oNe soup";
+            $word = "onE";
+            $expected_outcome = 2;
+            $word_frequency_instance = new WordFreqiency($sentence, $word);
 
-          //ACT
-          $test_result = $word_frequency_instance->checkWords($sentence, $word);
+            //ACT
+            $test_result = $word_frequency_instance->checkWords($sentence, $word);
 
-          //ASSERT
-          $this->assertEquals($expected_outcome, $test_result);
+            //ASSERT
+            $this->assertEquals($expected_outcome, $test_result);
         }
         function test_NumericAndAlphaNumericMix()
         {
-          //Arrange
-          $sentence = "Th3r3 is some here and th3r3 are some over there";
-          $word = "th3r3";
-          
-          $expected_outcome = 2;
-          $word_frequency_instance = new WordFreqiency($sentence, $word);
+            //Arrange
+            $sentence = "Th3r3 is some here and th3r3 are some over there";
+            $word = "th3r3";
+            $expected_outcome = 2;
+            $word_frequency_instance = new WordFreqiency($sentence, $word);
 
-          //ACT
-          $test_result = $word_frequency_instance->checkWords($sentence, $word);
+            //ACT
+            $test_result = $word_frequency_instance->checkWords($sentence, $word);
 
-          //ASSERT
-          $this->assertEquals($expected_outcome, $test_result);
+            //ASSERT
+            $this->assertEquals($expected_outcome, $test_result);
+        }
+        function test_MixOfNumericAlphaAndNonAlphaNumericCharacters()
+        {
+            //Arrange
+            $sentence = "C@nad@ oh C@nad@";
+            $word = "C@nad@";
+            $expected_outcome = 2;
+            $word_frequency_instance = new WordFreqiency($sentence, $word);
+
+            //ACT
+            $test_result = $word_frequency_instance->checkWords($sentence, $word);
+
+            //ASSERT
+            $this->assertEquals($expected_outcome, $test_result);
         }
     }
 
